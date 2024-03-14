@@ -32,6 +32,8 @@
   <arg name="verbose" default="false"/>
   <arg name="world_name" default="garage"/>
 
+  <env name="GAZEBO_MODEL_PATH" value="${GAZEBO_MODEL_PATH}:$(find vehicle_simulator)/models"/>
+
   <include file="$(find gazebo_ros)/launch/empty_world.launch" >
     <arg name="paused" value="$(arg paused)"/>
     <arg name="use_sim_time" value="$(arg use_sim_time)"/>
