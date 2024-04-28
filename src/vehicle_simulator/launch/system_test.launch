@@ -1,7 +1,7 @@
 <launch>
 
-  <arg name="world_name" default="UnstructedEnvironment2"/>
-  <!-- <arg name="world_name" default="StairEnvironmentWorld9"/> -->
+  <!-- <arg name="world_name" default="UnstructedEnvironment2"/> -->
+  <arg name="world_name" default="StairEnvironmentWorld9"/>
   <!-- <arg name="world_name" default="SmallParkMaze2"/> -->
   <arg name="vehicleHeight" default="0.75"/>
   <arg name="cameraOffsetZ" default="0"/>
