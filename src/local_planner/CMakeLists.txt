@@ -52,11 +52,17 @@ link_directories(
 add_executable(localPlanner src/localPlanner.cpp)
 add_executable(pathFollower src/pathFollower.cpp)
 
+add_executable(PureLocalPlanner src/PureLocalPlanner.cpp)
+add_executable(PurePathFollower src/PurePathFollower.cpp)
+
 ## Specify libraries to link a library or executable target against
 target_link_libraries(localPlanner ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 target_link_libraries(pathFollower ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 
-install(TARGETS localPlanner pathFollower
+target_link_libraries(PurePathFollower ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+target_link_libraries(PureLocalPlanner ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+
+install(TARGETS localPlanner pathFollower PurePathFollower PureLocalPlanner
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}

@@ -26,6 +26,9 @@ link_directories(
   ${GAZEBO_LIBRARY_DIRS}
 )
 
+
+include_directories(/usr/include/sdformat-9.10)
+
 add_library(gazebo_ros_velodyne_laser src/GazeboRosVelodyneLaser.cpp)
 target_link_libraries(gazebo_ros_velodyne_laser
   ${catkin_LIBRARIES}

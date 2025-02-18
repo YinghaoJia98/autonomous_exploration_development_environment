@@ -1,0 +1,8 @@
+<launch>
+
+  <node pkg="sensor_scan_generation" type="sensorScanGeneration" name="sensorScanGeneration" output="screen" required="true">
+
+  <remap from="/state_estimation" to="/SmbA/ground_truth/state"/>
+  </node>
+
+</launch>
